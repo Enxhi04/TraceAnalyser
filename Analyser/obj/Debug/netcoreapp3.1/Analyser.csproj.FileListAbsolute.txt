@@ -1,0 +1,123 @@
+C:/Users/Kristjan/source/repos/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.exe
+C:/Users/Kristjan/source/repos/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.deps.json
+C:/Users/Kristjan/source/repos/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.json
+C:/Users/Kristjan/source/repos/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.dev.json
+C:/Users/Kristjan/source/repos/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.dll
+C:/Users/Kristjan/source/repos/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.pdb
+C:/Users/Kristjan/source/repos/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.csprojAssemblyReference.cache
+C:/Users/Kristjan/source/repos/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfoInputs.cache
+C:/Users/Kristjan/source/repos/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfo.cs
+C:/Users/Kristjan/source/repos/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.csproj.CoreCompileInputs.cache
+C:/Users/Kristjan/source/repos/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.dll
+C:/Users/Kristjan/source/repos/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.pdb
+C:/Users/Kristjan/source/repos/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.genruntimeconfig.cache
+C:/Users/Kristjan/source/repos/Analyser/Analyser/bin/Debug/netcoreapp3.1/BasicWW.eaxml
+C:/Users/Kristjan/source/repos/Analyser/Analyser/bin/Debug/netcoreapp3.1/LogFile.csv
+C:/Users/Kristjan/Downloads/Analyser/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.exe
+C:/Users/Kristjan/Downloads/Analyser/Analyser/Analyser/bin/Debug/netcoreapp3.1/BasicWW.eaxml
+C:/Users/Kristjan/Downloads/Analyser/Analyser/Analyser/bin/Debug/netcoreapp3.1/LogFile.csv
+C:/Users/Kristjan/Downloads/Analyser/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.deps.json
+C:/Users/Kristjan/Downloads/Analyser/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.json
+C:/Users/Kristjan/Downloads/Analyser/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.dev.json
+C:/Users/Kristjan/Downloads/Analyser/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.dll
+C:/Users/Kristjan/Downloads/Analyser/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.pdb
+C:/Users/Kristjan/Downloads/Analyser/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.csprojAssemblyReference.cache
+C:/Users/Kristjan/Downloads/Analyser/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfoInputs.cache
+C:/Users/Kristjan/Downloads/Analyser/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfo.cs
+C:/Users/Kristjan/Downloads/Analyser/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.dll
+C:/Users/Kristjan/Downloads/Analyser/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.pdb
+C:/Users/Kristjan/Downloads/Analyser/Analyser/Analyser/bin/Debug/netcoreapp3.1/LogFile1.csv
+C:/Users/Kristjan/Downloads/Analyser/Analyser/Analyser/bin/Debug/netcoreapp3.1/BasicWW2.eaxml
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/BasicWW.eaxml
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/BasicWW2.eaxml
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/LogFile.csv
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/LogFile1.csv
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/Analyser.deps.json
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.json
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.dev.json
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/Analyser.dll
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/Analyser.pdb
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/obj/Debug/netcoreapp3.1/Analyser.csprojAssemblyReference.cache
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfoInputs.cache
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfo.cs
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/obj/Debug/netcoreapp3.1/Analyser.csproj.CoreCompileInputs.cache
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/obj/Debug/netcoreapp3.1/Analyser.dll
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/obj/Debug/netcoreapp3.1/Analyser.pdb
+/Users/enxhiferko/Downloads/Analyser - Copy/Analyser/obj/Debug/netcoreapp3.1/Analyser.genruntimeconfig.cache
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfoInputs.cache
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfo.cs
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/obj/Debug/netcoreapp3.1/Analyser.csproj.CoreCompileInputs.cache
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/obj/Debug/netcoreapp3.1/Analyser.dll
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/obj/Debug/netcoreapp3.1/Analyser.pdb
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/Analyser.exe
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/BasicWW.eaxml
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/BasicWW2.eaxml
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/LogFile.csv
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/LogFile1.csv
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/Analyser.deps.json
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.json
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.dev.json
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/Analyser.dll
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/bin/Debug/netcoreapp3.1/Analyser.pdb
+C:/Users/Kristjan/Documents/Analyser0102/Analyser - Copy/Analyser/obj/Debug/netcoreapp3.1/Analyser.genruntimeconfig.cache
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.exe
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/bin/Debug/netcoreapp3.1/BasicWW.eaxml
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/bin/Debug/netcoreapp3.1/BasicWW2.eaxml
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/bin/Debug/netcoreapp3.1/LogFile.csv
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/bin/Debug/netcoreapp3.1/LogFile1.csv
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.deps.json
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.json
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.dev.json
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.dll
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.pdb
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.csprojAssemblyReference.cache
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfoInputs.cache
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfo.cs
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.csproj.CoreCompileInputs.cache
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.dll
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.pdb
+C:/Users/Kristjan/Documents/Analyser0109/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.genruntimeconfig.cache
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.exe
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/BasicWW.eaxml
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/BasicWW2.eaxml
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/LogFile.csv
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/LogFile1.csv
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.deps.json
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.json
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.dev.json
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.dll
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.pdb
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.csprojAssemblyReference.cache
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfoInputs.cache
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfo.cs
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.csproj.CoreCompileInputs.cache
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.dll
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.pdb
+C:/Users/Kristjan/Documents/Analyser0110/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.genruntimeconfig.cache
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/Files/BasicWW.eaxml
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/Files/BasicWW2.eaxml
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/Files/LogFile.csv
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/Files/LogFile1.csv
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.deps.json
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.json
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.dev.json
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.dll
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser0110/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.pdb
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser0110/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfoInputs.cache
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser0110/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfo.cs
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser0110/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.csproj.CoreCompileInputs.cache
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser0110/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.dll
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser0110/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.pdb
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser0110/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.genruntimeconfig.cache
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.deps.json
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.json
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.runtimeconfig.dev.json
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.dll
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser/Analyser/bin/Debug/netcoreapp3.1/Analyser.pdb
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.csprojAssemblyReference.cache
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfoInputs.cache
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.AssemblyInfo.cs
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.csproj.CoreCompileInputs.cache
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.dll
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.pdb
+/Users/enxhiferko/Documents/MDH/2021/Analyser/Analyser/Analyser/obj/Debug/netcoreapp3.1/Analyser.genruntimeconfig.cache
