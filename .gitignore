@@ -167,3 +167,7 @@ $RECYCLE.BIN/
 /MigrationBackup
 
 *.idea/
+Analyser/Test case/.DS_Store
+.vs/Analyser/xs/project-cache/Analyser-Debug.json
+.vs/Analyser/xs/UserPrefs.xml
+Analyser/.DS_Store
