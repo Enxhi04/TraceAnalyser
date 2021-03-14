@@ -8,13 +8,15 @@
 
 # Build results
 
-[Dd]ebug/
+Analyser/[Dd]ebug/
 x64/
 build/
 [Bb]in/
 [Oo]bj/
 packages/*.dll
-
+.vs/
+Analyser/.vs/
+Analyser/[Bb]in/
 # Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
 !packages/*/build/
 

@@ -7,8 +7,13 @@ namespace Analyser
     {
         public static string GetChildValueByLocalName(this XElement element, string localName)
         {
+            return element.GetChildByLocalName(localName)?.Value;
+        }
+
+        public static XElement GetChildByLocalName(this XElement element, string localName)
+        {
             return element.Elements()
-                .Single(x => x.Name.LocalName == localName).Value;
+                .FirstOrDefault(x => x.Name.LocalName == localName);
         }
     }
 }

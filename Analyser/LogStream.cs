@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 
 namespace Analyser
 {
@@ -10,17 +9,19 @@ namespace Analyser
     public class LogStream
     {
         private List<string> columnNames;
-        // TODO maybe encapsulate
         public Queue<Log> QueuedLogs;
         private string _primaryKeyColumn;
+        private double _primaryKeyScale;
+
         private Log _previousLog;
         StreamReader _file;
 
-        public LogStream(string filePath, string primaryKeyColumn)
+        public LogStream(string filePath, string primaryKeyColumn, double primaryKeyScale)
         {
             QueuedLogs = new Queue<Log>();
             _file = new StreamReader(filePath);
             _primaryKeyColumn = primaryKeyColumn;
+            _primaryKeyScale = primaryKeyScale;
 
             columnNames = _file.ReadLine().Split(';').ToList();
         }
@@ -37,7 +38,14 @@ namespace Analyser
             var values = line.Split(',').ToList();
             for (int i = 0; i < columnNames.Count; i++)
             {
-                log.Add(columnNames[i], values[i]);
+                string value = values[i];
+                if (columnNames[i] == _primaryKeyColumn)
+                {
+                    value = (double.Parse(value) / _primaryKeyScale).ToString();
+                }
+
+                log.Add(columnNames[i], value);
+
             }
 
 
@@ -66,7 +74,7 @@ namespace Analyser
                 // if signal has a logged value, it means it has changed. 
                 if (!keyValue.Key.Equals(_primaryKeyColumn, StringComparison.OrdinalIgnoreCase) && !string.IsNullOrEmpty(keyValue.Value)) //timestamp is ignored because it changes always
                 {
-                    yield return keyValue.Key;   
+                    yield return keyValue.Key;
                 }
             }
         }

@@ -1,7 +1,7 @@
 ﻿using Analyser.Constraints;
+using Analyser.VerificationValidation;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Xml.Linq;
 
@@ -10,14 +10,19 @@ namespace Analyser
     class Program
     {
         private const string timeStamp = "timestamp";
+        private const double DEFAULT_TIMESTAMP_SCALE = 1;
+
         static void Main(string[] args)
         {
-            var constraintsProvider = new ConstraintsProvider("./Files/BasicWW2.eaxml", "http://east-adl.info/2.1.12");
+            XNamespace ns = "http://east-adl.info/2.1.12";
+            var constraintsProvider = new ConstraintsProvider("./Files/BasicWW2.eaxml", ns.NamespaceName);
+
+            var validationWriter = new ValidationWriter("./Files/BasicWW2.eaxml", ns);
 
             var allDelayConstraints = constraintsProvider.GetAllDelayConstraints();
             var allAgeConstraints = constraintsProvider.GetAllAgeConstraints();
 
-            var logStream = new LogStream("./Files/LogFile1.csv", timeStamp);
+            var logStream = new LogStream("./Files/LogFile1.csv", timeStamp, args.Any() ? double.Parse(args[0]) : DEFAULT_TIMESTAMP_SCALE);
 
             var log = logStream.GetNextLog();
             //first log is always enqueued
@@ -31,11 +36,11 @@ namespace Analyser
                 foreach (var responseSignal in changedSignals)
                 {// if log contains R1 it can be validated bcause it is the last signal that can be triggered in a chain of stiluli and response signals[{s1,r1}, {s2,r2}, .... {sn,rn}]
                     var validatableAgeConstaints = allAgeConstraints
-                        .Where(x => x.StimulusResponses.First().Response == responseSignal) 
+                        .Where(x => x.StimulusResponses.First().Response == responseSignal)
                         .ToList();
                     foreach (var constraint in validatableAgeConstaints)
                     {
-                        ValidateAgeConstraint(constraint, log, logStream);
+                        ValidateAgeConstraint(constraint, log, logStream, validationWriter);
                     }
 
                     var validatableDelayConstraints = allDelayConstraints
@@ -44,11 +49,7 @@ namespace Analyser
 
                     foreach (var constraint in validatableDelayConstraints)
                     {
-                        //if (log[timeStamp] == "305") test reason
-                        //{
-
-                        //}
-                        ValidateDelayConstraint(constraint, log, logStream);
+                        ValidateDelayConstraint(constraint, log, logStream, validationWriter);
                     }
                 }
 
@@ -57,9 +58,11 @@ namespace Analyser
                 DeleteFromQueue(allAgeConstraints, allDelayConstraints, logStream);
                 log = logStream.GetNextLog();
             }
+
+            validationWriter.Save();
         }
 
-        private static void ValidateAgeConstraint(AgeConstraint constraint, Log log, LogStream logStream)
+        private static void ValidateAgeConstraint(AgeConstraint constraint, Log log, LogStream logStream, ValidationWriter validationWriter)
         {
             // needed to check the order of the signals. stimulus1<stimulus2...<stimulusN-1<stimulusN<responseN<responseN-1...<response2<response1 
             double lastSignalTimestamp = Double.MinValue;
@@ -107,16 +110,32 @@ namespace Analyser
             // validate constraint
             if (double.Parse(log[timeStamp]) - firstStimulusTimestamp != constraint.Value)
             {
+
                 Console.WriteLine
                 (
                     $"Stimulus signal {constraint.StimulusResponses.First().Stimulus}:{firstStimulusTimestamp} " +
                     $"with response signal {constraint.StimulusResponses.First().Response}:{log[timeStamp]} " +
                     $"failed for AGE-CONSTRAINT with NAME {constraint.Value}."
                 );
+
+                var vvLog = new VerificationValidationLog()
+                {
+                    Constraint = constraint.ShortName,
+                    ConstraintType = "AGE-CONSTRAINT",
+                    Response = constraint.StimulusResponses.First().Response,
+                    ResponseTimestamp = log[timeStamp],
+                    Stimulus = constraint.StimulusResponses.First().Stimulus,
+                    StimulusTimestamp = firstStimulusTimestamp.ToString(),
+                    Value = constraint.Value
+                };
+
+                validationWriter.WriteValidation(vvLog);
+
+
             }
         }
 
-        private static void ValidateDelayConstraint(DelayConstraint constraint, Log log, LogStream logStream)
+        private static void ValidateDelayConstraint(DelayConstraint constraint, Log log, LogStream logStream, ValidationWriter validationWriter)
         {
             var stimulusSignalName = constraint.StimulusResponse.Stimulus;
 
@@ -138,6 +157,19 @@ namespace Analyser
                     $"Stimulus signal {stimulusSignalName}:{stimulusLog[timeStamp]} with response signal {constraint.StimulusResponse.Response}:{log[timeStamp]} " +
                     $"failed for DELAY-CONSTRAINT with NAME {constraint.Value}."
                 );
+
+                var vvLog = new VerificationValidationLog()
+                {
+                    Constraint = constraint.ShortName,
+                    ConstraintType = "DELAY-CONSTRAINT",
+                    Response = constraint.StimulusResponse.Response,
+                    ResponseTimestamp = log[timeStamp],
+                    Stimulus = stimulusSignalName,
+                    StimulusTimestamp = stimulusLog[timeStamp],
+                    Value = constraint.Value
+                };
+
+                validationWriter.WriteValidation(vvLog);
             }
         }
 
