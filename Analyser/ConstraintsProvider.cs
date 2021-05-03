@@ -49,6 +49,35 @@ namespace Analyser
             return ageConstraints;
         }
 
+        public List<ReactionConstraint> GetAllReactionConstraints()
+        {
+            var eventChains = _xml.Descendants(_ns + "EVENT-CHAIN").Elements();
+            var eventFunctions = _xml.Descendants(_ns + "EVENT-FUNCTION-FLOW-PORT").Elements();
+            var reactionConstraintElements = allConstraintXmlElements.Where(x => x.Name.LocalName == "REACTION-CONSTRAINT");
+
+            var reactionConstraints = new List<ReactionConstraint>();
+            foreach (var element in reactionConstraintElements)
+            {
+                var constraintShortName = element.GetChildValueByLocalName("SHORT-NAME");
+
+                var constraintValue = double.Parse(element.GetChildValueByLocalName("NAME"), CultureInfo.InvariantCulture);
+                var scopeRef = FindResourceName(element.GetChildValueByLocalName("SCOPE-REF"));
+
+                List<StimulusResponse> stimulusResponses = new List<StimulusResponse>();
+                FindStimulusResponses(eventChains, eventFunctions, scopeRef, ref stimulusResponses);
+
+                var constaint = new ReactionConstraint()
+                {
+                    ShortName = constraintShortName,
+                    Value = constraintValue,
+                    StimulusResponses = stimulusResponses
+                };
+                reactionConstraints.Add(constaint);
+            }
+
+            return reactionConstraints;
+        }
+
         public List<DelayConstraint> GetAllDelayConstraints()
         {
             var delayConstraints = new List<DelayConstraint>();
@@ -86,14 +115,11 @@ namespace Analyser
             string scopeRef,
             ref List<StimulusResponse> stimulusResponses
         )
-        {
-           
+        { 
             if (string.IsNullOrEmpty(scopeRef))
             {
                 return;
             }
-
-
 
             var resourceParent = eventChains.Single(x => x.Name.LocalName == "SHORT-NAME" && x.Value == scopeRef).Parent;
             var stimulusPortName = FindPortName(resourceParent, eventFunctions, "STIMULUS-REF");
@@ -108,7 +134,7 @@ namespace Analyser
             stimulusResponses.Add(stimulusResponse);
             
             var segRefs = resourceParent.Elements()
-                           .Single(c => c.Name.LocalName == "SEGMENT-REFS");
+                           .First(c => c.Name.LocalName == "SEGMENT-REFS");
 
             var seg = "";
             if (segRefs.HasElements)
@@ -116,8 +142,6 @@ namespace Analyser
 
                  seg = FindResourceName(segRefs.GetChildValueByLocalName("SEGMENT-REF"));
             }
-
-       
 
             FindStimulusResponses(eventChains, eventFunctions, seg, ref stimulusResponses);
         }

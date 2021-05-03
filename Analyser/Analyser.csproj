@@ -12,6 +12,9 @@
     <None Update="BasicWW2.eaxml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Files\BasicWW3.eaxml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="LogFile.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
