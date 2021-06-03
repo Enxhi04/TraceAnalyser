@@ -35,7 +35,7 @@ namespace Analyser
                 return null;
             }
 
-            var values = line.Split(',').ToList();
+            var values = line.Split(';').ToList();
             for (int i = 0; i < columnNames.Count; i++)
             {
                 string value = values[i];
@@ -63,7 +63,7 @@ namespace Analyser
         public IEnumerable<Log> GetChangedLogs(string signalName)
         {
             return QueuedLogs
-                .Where(x => x.ChangedColumns.Contains(signalName));
+                .Where(x => x.ChangedColumns.Any(x=> x.Equals(signalName, StringComparison.OrdinalIgnoreCase)));
         }
 
         // get columns that have changed 

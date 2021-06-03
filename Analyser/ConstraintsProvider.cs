@@ -63,15 +63,40 @@ namespace Analyser
                 var constraintValue = double.Parse(element.GetChildValueByLocalName("NAME"), CultureInfo.InvariantCulture);
                 var scopeRef = FindResourceName(element.GetChildValueByLocalName("SCOPE-REF"));
 
-                List<StimulusResponse> stimulusResponses = new List<StimulusResponse>();
-                FindStimulusResponses(eventChains, eventFunctions, scopeRef, ref stimulusResponses);
-
                 var constaint = new ReactionConstraint()
                 {
                     ShortName = constraintShortName,
-                    Value = constraintValue,
-                    StimulusResponses = stimulusResponses
+                    Value = constraintValue
                 };
+
+
+                var resourceParent = eventChains.Single(x => x.Name.LocalName == "SHORT-NAME" && x.Value == scopeRef).Parent;
+                var stimulusPortName = FindPortName(resourceParent, eventFunctions, "STIMULUS-REF");
+                var responsePortName = FindPortName(resourceParent, eventFunctions, "RESPONSE-REF");
+
+                constaint.InitialStimulusResponse = new StimulusResponse()
+                {
+                    Stimulus = stimulusPortName,
+                    Response = responsePortName
+                };
+
+                var segRefs = resourceParent.Elements()
+                               .First(c => c.Name.LocalName == "SEGMENT-REFS");
+
+                if (segRefs.HasElements)
+                {
+                    foreach (var segmentRef in segRefs.GetChildrenValueByLocalName("SEGMENT-REF"))
+                    {
+                        var seg = FindResourceName(segmentRef);
+
+                        List<StimulusResponse> stimulusResponses = new List<StimulusResponse>();
+
+                        FindStimulusResponses(eventChains, eventFunctions, seg, ref stimulusResponses);
+
+                        constaint.StimulusResponses.Add(stimulusResponses);
+                    }
+                }
+
                 reactionConstraints.Add(constaint);
             }
 
@@ -144,6 +169,47 @@ namespace Analyser
             }
 
             FindStimulusResponses(eventChains, eventFunctions, seg, ref stimulusResponses);
+        }
+
+        private static void AFindStimulusResponses
+        (
+            IEnumerable<XElement> eventChains,
+            IEnumerable<XElement> eventFunctions,
+            string scopeRef,
+            ref List<StimulusResponse> stimulusResponses
+        )
+        {
+            if (string.IsNullOrEmpty(scopeRef))
+            {
+                return;
+            }
+
+            var resourceParent = eventChains.Single(x => x.Name.LocalName == "SHORT-NAME" && x.Value == scopeRef).Parent;
+            var stimulusPortName = FindPortName(resourceParent, eventFunctions, "STIMULUS-REF");
+            var responsePortName = FindPortName(resourceParent, eventFunctions, "RESPONSE-REF");
+
+            StimulusResponse stimulusResponse = new StimulusResponse()
+            {
+                Stimulus = stimulusPortName,
+                Response = responsePortName
+            };
+
+            stimulusResponses.Add(stimulusResponse);
+
+            var segRefs = resourceParent.Elements()
+                           .First(c => c.Name.LocalName == "SEGMENT-REFS");
+
+            if (segRefs.HasElements)
+            {
+                foreach (var segmentRef in segRefs.GetChildrenValueByLocalName("SEGMENT-REF"))
+                {
+                    var seg = FindResourceName(segmentRef);
+
+                    FindStimulusResponses(eventChains, eventFunctions, seg, ref stimulusResponses);
+                }
+            }
+
+
         }
 
         private static string FindPortName(XElement resourceParent, IEnumerable<XElement> eventFunctions, string resourceLocalName)
