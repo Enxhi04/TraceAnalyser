@@ -42,7 +42,7 @@ namespace Analyser
                         .ToList();
                     foreach (var constraint in validatableAgeConstaints)
                     {
-                        ValidateAgeConstraint(constraint, log, logStream, validationWriter);
+                       ValidateAgeConstraint(constraint, log, logStream, validationWriter);
                     }
 
                     var validatableReactionConstaints = allReactionConstraints
@@ -65,7 +65,7 @@ namespace Analyser
 
                 logStream.QueuedLogs.Enqueue(log);
 
-                DeleteFromQueue(allAgeConstraints, allDelayConstraints, logStream);
+                DeleteFromQueue(allAgeConstraints, allDelayConstraints, allReactionConstraints, logStream);
                 log = logStream.GetNextLog();
             }
 
@@ -143,14 +143,14 @@ namespace Analyser
 
                 List<string> stimuli;
                 // when first stimulus of the segment is the same as last response of previous segment we count the same change for both signals
-                if (i == 0|| currentSegmentStimulusResponses.First().Stimulus != constraint.StimulusResponses[i - 1].Last().Response)
+                if (i == 0 || currentSegmentStimulusResponses.First().Stimulus != constraint.StimulusResponses[i - 1].Last().Response)
                 {
                     stimuli = currentSegmentStimulusResponses.Select(x => x.Stimulus)
                         .ToList();
                 }
                 else
                 {
-                    stimuli= currentSegmentStimulusResponses.Skip(1)
+                    stimuli = currentSegmentStimulusResponses.Skip(1)
                         .Select(x => x.Stimulus)
                         .ToList();
                 }
@@ -265,12 +265,17 @@ namespace Analyser
             }
         }
 
-        private static void DeleteFromQueue(List<AgeConstraint> allAgeConstraints, List<DelayConstraint> allDelayConstraints, LogStream logStream)
+        private static void DeleteFromQueue(
+            List<AgeConstraint> allAgeConstraints,
+            List<DelayConstraint> allDelayConstraints,
+            List<ReactionConstraint> allReactionConstraints,
+            LogStream logStream
+        )
         {
             int logsToDelete = 0;
             foreach (var log in logStream.QueuedLogs)
             {
-                if (!CanDeleteLog(log, allAgeConstraints, allDelayConstraints))
+                if (!CanDeleteLog(log, allAgeConstraints, allDelayConstraints, allReactionConstraints))
                 {
                     break;
                 }
@@ -296,7 +301,12 @@ namespace Analyser
             }
         }
 
-        private static bool CanDeleteLog(Log log, List<AgeConstraint> allAgeConstraints, List<DelayConstraint> allDelayConstraints)
+        private static bool CanDeleteLog(
+            Log log,
+            List<AgeConstraint> allAgeConstraints,
+            List<DelayConstraint> allDelayConstraints,
+            List<ReactionConstraint> allReactionConstraints
+        )
         {
             foreach (var ageConstraint in allAgeConstraints)
             {
@@ -313,6 +323,16 @@ namespace Analyser
                 bool isStimulus = log.ChangedColumns.Contains(delayConstraint.StimulusResponse.Stimulus);
                 //is log has a non processed stimulus
                 if (isStimulus && !delayConstraint.ProccessedStimulusTimestamps.Contains(log[timeStamp]))
+                {
+                    return false;
+                }
+            }
+
+            foreach (var reactionConstraint in allReactionConstraints)
+            {
+                bool isStimulus = log.ChangedColumns.Contains(reactionConstraint.InitialStimulusResponse.Stimulus);
+                //is log has a non processed stimulus
+                if (isStimulus && !reactionConstraint.ProccessedStimulusTimestamps.Contains(log[timeStamp]))
                 {
                     return false;
                 }
