@@ -181,18 +181,18 @@ namespace Analyser
                     $"failed for REACTION-CONSTRAINT with NAME {constraint.Value}."
                 );
 
-                //var vvLog = new VerificationValidationLog()
-                //{
-                //    Constraint = constraint.ShortName,
-                //    ConstraintType = "REACTION-CONSTRAINT",
-                //    Response = constraint.StimulusResponses.First().Response,
-                //    ResponseTimestamp = log[timeStamp],
-                //    Stimulus = constraint.StimulusResponses.First().Stimulus,
-                //    StimulusTimestamp = firstStimulusTimestamp.ToString(),
-                //    Value = constraint.Value
-                //};
+                var vvLog = new VerificationValidationLog()
+                {
+                    Constraint = constraint.ShortName,
+                    ConstraintType = "REACTION-CONSTRAINT",
+                    Response = constraint.InitialStimulusResponse.Response,
+                    ResponseTimestamp = log[timeStamp],
+                    Stimulus = constraint.InitialStimulusResponse.Stimulus,
+                    StimulusTimestamp = firstStimulusTimestamp.ToString(),
+                    Value = constraint.Value
+                };
 
-                //validationWriter.WriteValidation(vvLog);
+                validationWriter.WriteValidation(vvLog);
             }
         }
 
